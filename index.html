@@ -1,157 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>주섬주섬</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DayPixel — 일상에 필요한 것을 만듭니다</title>
     <meta
       name="description"
-      content="주섬주섬은 링크, 상품, 장소, 영상, 글감을 가볍게 담아두고 나중에 다시 꺼내보는 보관 앱입니다."
-    />
-    <style>
-      :root {
-        color-scheme: light;
-        --ink: #171412;
-        --muted: #6f6760;
-        --line: #eadfd2;
-        --paper: #fff8ef;
-        --accent: #ed6a45;
-        --accent-soft: #ffe1c4;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family:
-          ui-rounded,
-          "Apple SD Gothic Neo",
-          "Pretendard",
-          -apple-system,
-          BlinkMacSystemFont,
-          sans-serif;
-        background:
-          radial-gradient(circle at 18% 12%, #ffe5b9 0 22%, transparent 34%),
-          radial-gradient(circle at 86% 18%, #ffd6c9 0 18%, transparent 32%),
-          linear-gradient(135deg, #fffaf2 0%, #f6ede1 100%);
-        color: var(--ink);
-      }
-
-      main {
-        width: min(960px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 72px 0 56px;
-      }
-
-      .hero {
-        display: grid;
-        gap: 26px;
-        padding: 48px;
-        border: 1px solid rgba(234, 223, 210, 0.82);
-        border-radius: 36px;
-        background: rgba(255, 248, 239, 0.72);
-        box-shadow: 0 28px 80px rgba(68, 49, 29, 0.12);
-        backdrop-filter: blur(18px);
-      }
-
-      .mark {
-        width: 58px;
-        height: 58px;
-        border-radius: 18px;
-        display: grid;
-        place-items: center;
-        background: var(--accent-soft);
-        color: var(--ink);
-        font-size: 28px;
-        font-weight: 900;
-        letter-spacing: -0.08em;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(42px, 9vw, 84px);
-        line-height: 0.94;
-        letter-spacing: -0.08em;
-      }
-
-      p {
-        margin: 0;
-        max-width: 620px;
-        color: var(--muted);
-        font-size: clamp(18px, 2.4vw, 23px);
-        line-height: 1.65;
-        letter-spacing: -0.03em;
-      }
-
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 8px;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        min-height: 48px;
-        padding: 0 18px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: #fffaf3;
-        text-decoration: none;
-        font-weight: 800;
-        letter-spacing: -0.03em;
-      }
-
-      .button.primary {
-        border-color: transparent;
-        background: var(--accent);
-        color: white;
-      }
-
-      footer {
-        margin-top: 24px;
-        color: var(--muted);
-        font-size: 13px;
-        letter-spacing: -0.02em;
-      }
-
-      @media (max-width: 640px) {
-        main {
-          width: min(100% - 28px, 960px);
-          padding-top: 34px;
-        }
-
-        .hero {
-          padding: 30px 24px;
-          border-radius: 28px;
+      content="데이픽셀은 일상의 작은 불편을 발견하고, 오래 쓰고 싶은 앱과 웹 서비스를 만듭니다."
+    >
+    <meta name="theme-color" content="#f5f2ea">
+    <link rel="canonical" href="https://daypixel.kr/">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="DayPixel — 일상에 필요한 것을 만듭니다">
+    <meta
+      property="og:description"
+      content="일상의 작은 불편을 더 단순하고 좋은 경험으로 바꾸는 디지털 제품 스튜디오."
+    >
+    <meta property="og:url" content="https://daypixel.kr/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DayPixel",
+        "alternateName": "데이픽셀",
+        "url": "https://daypixel.kr/",
+        "email": "haeun@daypixel.kr",
+        "foundingDate": "2026",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Seoul",
+          "addressRegion": "Seongbuk-gu",
+          "addressCountry": "KR"
         }
       }
-    </style>
+    </script>
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="title">
-        <div class="mark" aria-hidden="true">ㅈㅅ</div>
-        <h1 id="title">주섬주섬</h1>
-        <p>
-          지금 바로 정리하지 않아도 괜찮습니다. 사고 싶은 것, 보고 싶은 것,
-          가보고 싶은 곳을 한곳에 담아두고 필요할 때 다시 꺼내보세요.
-        </p>
-        <nav class="links" aria-label="앱 정보">
-          <a class="button primary" href="support.html">지원</a>
-          <a class="button" href="privacy.html">개인정보 처리방침</a>
-          <a class="button" href="app-ads.txt">app-ads.txt</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="DayPixel 홈">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">DayPixel</span>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+          <a href="#about">소개</a>
+          <a href="#service">서비스</a>
+          <a href="support.html">지원</a>
+          <a class="nav-pill" href="mailto:haeun@daypixel.kr">문의하기</a>
         </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="shell hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Digital product studio · Seoul</p>
+          <h1 id="hero-title">
+            일상에 필요한 것을<br>
+            <span class="accent">만듭니다.</span>
+          </h1>
+          <p class="hero-copy">
+            데이픽셀은 매일 마주치는 작은 불편을 발견하고, 누구나 쉽게 쓸 수 있는
+            앱과 웹 서비스로 바꿉니다.
+          </p>
+          <div class="button-row">
+            <a class="button primary" href="#service">서비스 보기</a>
+            <a class="button" href="#about">DayPixel 소개</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <article class="pixel-card card-today">
+            <small>DAY 01</small>
+            <span class="big-number">24h</span>
+            <strong>오늘을 조금 더 편하게</strong>
+          </article>
+          <article class="pixel-card card-make">
+            <small>WE MAKE</small>
+            <div class="grid">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+            <strong>작은 픽셀이 모여<br>하나의 경험이 됩니다.</strong>
+          </article>
+          <article class="pixel-card card-note">
+            <small>OUR STANDARD</small>
+            <p>쉽게.<br>분명하게.<br>꾸준하게.</p>
+          </article>
+        </div>
       </section>
-      <footer>© 2026 DayPixel. All rights reserved.</footer>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="shell">
+          <p class="section-label">How we work</p>
+          <h2 class="section-title" id="about-title">
+            거창한 기술보다<br>실제로 편해지는 경험을 먼저 봅니다.
+          </h2>
+          <p class="section-lead">
+            꼭 필요한 기능에 집중하고, 설명하지 않아도 이해되는 흐름을 만들며,
+            출시 후에도 사용자의 목소리를 반영해 꾸준히 다듬습니다.
+          </p>
+
+          <div class="principles">
+            <article class="principle">
+              <span class="principle-number">01 · FIND</span>
+              <h3>작은 불편을 찾습니다</h3>
+              <p>매일 반복되지만 익숙해서 지나쳤던 문제에서 시작합니다.</p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">02 · MAKE</span>
+              <h3>가볍게 쓸 수 있게 만듭니다</h3>
+              <p>복잡한 기능을 덜어내고 처음부터 자연스러운 경험을 설계합니다.</p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">03 · REFINE</span>
+              <h3>오래 쓸 수 있게 다듬습니다</h3>
+              <p>실제 사용 흐름을 살피고 필요한 변화는 빠르게 반영합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="service" aria-labelledby="service-title">
+        <div class="shell">
+          <p class="section-label">Our service</p>
+          <div class="service-panel">
+            <div class="service-copy">
+              <div class="service-brand">
+                <img
+                  src="assets/juseomjuseom-mark.png"
+                  width="66"
+                  height="66"
+                  alt="주섬주섬 앱 심볼"
+                >
+                <h3 id="service-title">주섬주섬</h3>
+              </div>
+              <p class="service-tagline">흩어진 링크를<br>한곳에 담아두세요.</p>
+              <p class="service-description">
+                사고 싶은 것, 보고 싶은 영상, 가보고 싶은 장소까지. 링크를
+                공유하면 필요한 정보를 찾아 보기 좋은 카드로 정리합니다.
+              </p>
+              <ul class="service-meta" aria-label="지원 기능">
+                <li>상품</li>
+                <li>장소</li>
+                <li>영상</li>
+                <li>읽을거리</li>
+                <li>iOS · Android</li>
+              </ul>
+              <div class="service-actions">
+                <a
+                  class="button primary"
+                  href="https://apps.apple.com/kr/app/id6764675472"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  App Store에서 보기
+                </a>
+                <a class="button" href="support.html">앱 지원</a>
+              </div>
+            </div>
+            <div class="service-visual">
+              <img
+                src="assets/juseomjuseom-home.png"
+                width="945"
+                height="2048"
+                loading="lazy"
+                alt="주섬주섬 앱에서 저장한 링크를 카드로 정리한 화면"
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="company-title">
+        <div class="shell company-panel">
+          <div>
+            <p class="section-label">About DayPixel</p>
+            <h2 id="company-title">하루에 필요한 한 조각을 만듭니다.</h2>
+            <p>
+              데이픽셀은 서울에서 시작한 디지털 제품 스튜디오입니다. 모바일 앱과
+              웹 서비스를 직접 기획하고 디자인하며 개발합니다.
+            </p>
+          </div>
+          <dl class="company-facts">
+            <div>
+              <dt>상호</dt>
+              <dd>데이픽셀 (DayPixel)</dd>
+            </div>
+            <div>
+              <dt>대표</dt>
+              <dd>이하은</dd>
+            </div>
+            <div>
+              <dt>소재지</dt>
+              <dd>서울특별시 성북구</dd>
+            </div>
+            <div>
+              <dt>분야</dt>
+              <dd>모바일 앱 · 웹 서비스</dd>
+            </div>
+            <div>
+              <dt>이메일</dt>
+              <dd><a href="mailto:haeun@daypixel.kr">haeun@daypixel.kr</a></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="contact-title">
+        <div class="shell contact-band">
+          <h2 id="contact-title">함께 만들고 싶은 이야기가 있나요?</h2>
+          <a href="mailto:haeun@daypixel.kr">haeun@daypixel.kr</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>© 2026 DayPixel. All rights reserved.</span>
+        <nav class="footer-links" aria-label="하단 메뉴">
+          <a href="support.html">고객지원</a>
+          <a href="privacy.html">개인정보 처리방침</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
